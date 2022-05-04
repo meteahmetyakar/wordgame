@@ -8,6 +8,15 @@
     <link rel="stylesheet" href="TemplateData/style.css">
 </head>
 <body>
+    <div class="header">
+        <div class="header-right">
+            <a class="active" href="#home">Home</a>
+            <div class="custom-btn-group mt-4">
+                <b>full-screen</b>
+            </div>
+        </div>
+    </div>
+
     <div id="unity-container" class="unity-desktop">
         <canvas id="unity-canvas" width=1920 height=1080></canvas>
         <div id="unity-loading-bar">
@@ -29,21 +38,22 @@
 
         </div>
     </div>
-
+    
     <script>
         var container = document.querySelector("#unity-container");
         var canvas = document.querySelector("#unity-canvas");
         var loadingBar = document.querySelector("#unity-loading-bar");
         var progressBarFull = document.querySelector("#unity-progress-bar-full");
-        var fullscreenButton = document.querySelector("#unity-fullscreen-button");
+        var fullscreenButton = document.querySelector(".custom-btn-group mt-4");
         var warningBanner = document.querySelector("#unity-warning");
-
+        
         // Shows a temporary message banner/ribbon for a few seconds, or
         // a permanent error message on top of the canvas if type=='error'.
         // If type=='warning', a yellow highlight color is used.
         // Modify or remove this function to customize the visually presented
         // way that non-critical warnings and error messages are presented to the
         // user.
+        
         function unityShowBanner(msg, type) {
             function updateBannerVisibility() {
                 warningBanner.style.display = warningBanner.children.length ? 'block' : 'none';
@@ -110,6 +120,6 @@
         };
         document.body.appendChild(script);
     </script>
-
+        
 </body>
 </html>
