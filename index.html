@@ -30,11 +30,12 @@
     </div>
     
     <script>
+        unityInstance.SetFullscreen(1);
         var container = document.querySelector("#unity-container");
         var canvas = document.querySelector("#unity-canvas");
         var loadingBar = document.querySelector("#unity-loading-bar");
         var progressBarFull = document.querySelector("#unity-progress-bar-full");
-        var fullscreenButton = document.getElementsByClassName("btn custom-btn2 custom-btn2-bg custom-btn2-link");
+        var fullscreenButton = document.querySelector("#unity-fullscreen-button");
         var warningBanner = document.querySelector("#unity-warning");
         
         // Shows a temporary message banner/ribbon for a few seconds, or
