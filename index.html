@@ -13,12 +13,14 @@
     </script>
 
 </head>
+<!--<button onclick="unityInstance.SetFullscreen(1)" class="btn custom-btn custom-btn-bg custom-btn-link">Full Screen</button>-->
 <body>
 
     <div class="header">
         <div class="custom-btn-group mt-4">
             <a href="https://meteahmetyakar.github.io" class="btn custom-btn custom-btn-bg custom-btn-link">Home</a>
-            <button onclick="unityInstance.SetFullscreen(1)" class="btn custom-btn custom-btn-bg custom-btn-link">Full Screen</button>
+            <div style="height:20px; width: %UNITY_WIDTH%px; background: green;" onclick="unityInstance.SetFullscreen(1)"><b>Click here to make it full screen.</b></div>
+            <div id="unityContainer" style="width: %UNITY_WIDTH%px; height: %UNITY_HEIGHT%px; margin: auto"></div>
         </div>
 
     </div>
@@ -32,9 +34,9 @@
             </div>
         </div>
         <div id="unity-warning"> </div>
-        
+
     </div>
-    
+
     <script>
         var container = document.querySelector("#unity-container");
         var canvas = document.querySelector("#unity-canvas");
@@ -42,7 +44,7 @@
         var progressBarFull = document.querySelector("#unity-progress-bar-full");
         var fullscreenButton = document.getElementsByClassName("btn custom-btn2");
         var warningBanner = document.querySelector("#unity-warning");
-        
+
         // Shows a temporary message banner/ribbon for a few seconds, or
         // a permanent error message on top of the canvas if type=='error'.
         // If type=='warning', a yellow highlight color is used.
@@ -117,6 +119,6 @@
 
 
     </script>
-        
+
 </body>
 </html>
