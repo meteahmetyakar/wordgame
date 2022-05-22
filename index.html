@@ -11,7 +11,7 @@
 
     <div class="glass-card">
         <div class="row">
-            <a href="https://meteahmetyakar.github.io" class="btn custom-btn custom-btn-bg custom-btn-link">Home</a>
+            <a href="https://meteahmetyakar.github.io" class="button btn custom-btn custom-btn-bg custom-btn-link">Home</a>
         </div>
 
         <div class="row">
@@ -104,6 +104,7 @@
                 }).then((unityInstance) => {
                     fullscreenButton.onclick = () => {
                         unityInstance.SetFullscreen(1);
+                        document.querySelector("#unity-fullscreen-custom").value = "Resume";
                     };
                 }).catch((message) => {
                     alert(message);

@@ -94,6 +94,10 @@ body {
     display: none
 }
 
+a.button {
+    text-decoration: none;
+}
+
 .custom-btn {
     float: right;
     margin-right: 10px;
