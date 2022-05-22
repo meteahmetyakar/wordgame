@@ -87,7 +87,8 @@ body {
     left: 50%;
     top: 5%;
     transform: translate(-50%);
-    background: #232428;
+    background: #ffffff;
+    font-size: 30px;
     padding: 10px;
     display: none
 }
