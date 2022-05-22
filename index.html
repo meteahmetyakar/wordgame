@@ -104,7 +104,7 @@
                 }).then((unityInstance) => {
                     fullscreenButton.onclick = () => {
                         unityInstance.SetFullscreen(1);
-                        document.querySelector("#unity-fullscreen-custom").value = "Resume";
+                        this.value = "Resume";
                     };
                 }).catch((message) => {
                     alert(message);
