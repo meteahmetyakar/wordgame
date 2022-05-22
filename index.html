@@ -97,8 +97,8 @@
             config.devicePixelRatio = 10;
             unityShowBanner('This application are not supported on mobile devices.');
         } else {
-            canvas.style.width = "0px";
-            canvas.style.height = "0px";
+            canvas.style.width = "1920px";
+            canvas.style.height = "1080px";
 
             loadingBar.style.display = "block";
 
@@ -108,6 +108,7 @@
                 createUnityInstance(canvas, config, (progress) => {
                     progressBarFull.style.width = 100 * progress + "%";
                 }).then((unityInstance) => {
+                    loadingBar.style.display = "none";
                     fullscreenButton.onclick = () => {
                         unityInstance.SetFullscreen(1);
                         document.querySelector('#unity-fullscreen-custom').innerText = 'Resume';
