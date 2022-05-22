@@ -10,6 +10,21 @@
 <body>
 
     <div class="glass-card">
+        <div class="row" style="margin-bottom:35%">
+
+            <div id="unity-container" class="unity-desktop">
+                <canvas id="unity-canvas" ></canvas>
+                <div id="unity-loading-bar">
+                    <div id="unity-logo"></div>
+                    <div id="unity-progress-bar-empty">
+                        <div id="unity-progress-bar-full"></div>
+                    </div>
+                </div>
+        
+            </div>
+
+        </div>
+
         <div class="row">
             <a id="unity-fullscreen-custom" style="cursor:pointer" class="btn custom-btn custom-btn-bg custom-btn-link">Play Game</a>
         </div>
@@ -19,19 +34,9 @@
         </div>
 
 
+
     </div>
 
-    <div id="unity-container" class="unity-desktop">
-        <canvas id="unity-canvas" ></canvas>
-        <div id="unity-loading-bar">
-            <div id="unity-logo"></div>
-            <div id="unity-progress-bar-empty">
-                <div id="unity-progress-bar-full"></div>
-            </div>
-        </div>
-        <div id="unity-warning"> </div>
-        
-    </div>
     
     <script>
         var container = document.querySelector("#unity-container");
@@ -103,7 +108,6 @@
                 createUnityInstance(canvas, config, (progress) => {
                     progressBarFull.style.width = 100 * progress + "%";
                 }).then((unityInstance) => {
-                    loadingBar.style.display = "none";
                     fullscreenButton.onclick = () => {
                         unityInstance.SetFullscreen(1);
                         document.querySelector('#unity-fullscreen-custom').innerText = 'Resume';
