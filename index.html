@@ -95,7 +95,7 @@
             canvas.style.width = "0px";
             canvas.style.height = "0px";
 
-            loadingBar.style.display = "none";
+            loadingBar.style.display = "block";
 
             var script = document.createElement("script");
             script.src = loaderUrl;
@@ -104,6 +104,7 @@
                     progressBarFull.style.width = 100 * progress + "%";
                 }).then((unityInstance) => {
                     fullscreenButton.onclick = () => {
+                        loadingBar.style.display = "none";
                         unityInstance.SetFullscreen(1);
                         document.querySelector('#unity-fullscreen-custom').innerText = 'Resume';
                     };
