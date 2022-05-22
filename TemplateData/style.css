@@ -124,8 +124,9 @@ body {
 .row {
     position: relative;
     z-index: 10;
-    top: 50%;
+    top: 40%;
     left: 50%;
+    margin-bottom:2%;
     transform: translate(-50%, -50%);
     display: flex;
     align-content: center;
