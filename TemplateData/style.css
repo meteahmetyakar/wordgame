@@ -120,6 +120,33 @@ body {
             color: #ffffff !important;
         }
 
+
+.row {
+    position: relative;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-content: center;
+    justify-content: space-evenly;
+}
+
+.glass-card {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30em;
+    height: 15em;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.24);
+    border-radius: 16px;
+    position: absolute;
+    z-index: 1;
+    background: inherit;
+    overflow: hidden;
+}
+
+
 /* Style the header with a grey background and some padding */
 .header {
     overflow: hidden;

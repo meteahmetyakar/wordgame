@@ -9,12 +9,13 @@
 </head>
 <body>
 
-    <div class="header">
-        <div class="custom-btn-group mt-4">
+    <div class="glass-card">
+        <div class="row">
             <a href="https://meteahmetyakar.github.io" class="btn custom-btn custom-btn-bg custom-btn-link">Home</a>
+        </div>
 
-            <a id="unity-fullscreen-custom" type="button" style="cursor:pointer" class="btn custom-btn custom-btn-bg custom-btn-link">Full Screen</a>
-
+        <div class="row">
+            <a id="unity-fullscreen-custom" style="cursor:pointer" class="btn custom-btn custom-btn-bg custom-btn-link">Full Screen</a>
         </div>
 
     </div>
@@ -88,7 +89,7 @@
             // Avoid draining fillrate performance on mobile devices,
             // and default/override low DPI mode on mobile browsers.
             config.devicePixelRatio = 10;
-            unityShowBanner('WebGL builds are not supported on mobile devices.');
+            unityShowBanner('This application are not supported on mobile devices.');
         } else {
             canvas.style.width = "0px";
             canvas.style.height = "0px";
