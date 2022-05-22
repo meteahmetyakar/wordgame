@@ -10,7 +10,20 @@
 <body>
 
     <div class="glass-card">
+        <div class="row" style="margin-bottom:26%">
 
+            <div id="unity-container" class="unity-desktop">
+                <canvas id="unity-canvas" ></canvas>
+                <div id="unity-loading-bar">
+                    <div id="unity-logo"></div>
+                    <div id="unity-progress-bar-empty">
+                        <div id="unity-progress-bar-full"></div>
+                    </div>
+                </div>
+        
+            </div>
+
+        </div>
 
         <div class="row">
             <a id="unity-fullscreen-custom" style="cursor:pointer" class="btn custom-btn custom-btn-bg custom-btn-link">Play Game</a>
@@ -24,17 +37,7 @@
 
     </div>
 
-    <div id="unity-container" class="unity-desktop">
-        <canvas id="unity-canvas"></canvas>
-        <div id="unity-loading-bar">
-            <div id="unity-logo"></div>
-            <div id="unity-progress-bar-empty">
-                <div id="unity-progress-bar-full"></div>
-            </div>
-        </div>
-
-    </div>
-
+    
     <script>
         var container = document.querySelector("#unity-container");
         var canvas = document.querySelector("#unity-canvas");
@@ -42,7 +45,7 @@
         var progressBarFull = document.querySelector("#unity-progress-bar-full");
         var fullscreenButton = document.querySelector("#unity-fullscreen-custom");
         var warningBanner = document.querySelector("#unity-warning");
-
+        
         // Shows a temporary message banner/ribbon for a few seconds, or
         // a permanent error message on top of the canvas if type=='error'.
         // If type=='warning', a yellow highlight color is used.
@@ -94,8 +97,8 @@
             config.devicePixelRatio = 10;
             unityShowBanner('This application are not supported on mobile devices.');
         } else {
-            canvas.style.width = "1920px";
-            canvas.style.height = "1080px";
+            canvas.style.width = "0px";
+            canvas.style.height = "0px";
 
             loadingBar.style.display = "block";
 
@@ -117,6 +120,6 @@
             document.body.appendChild(script);
         }
     </script>
-
+        
 </body>
 </html>
