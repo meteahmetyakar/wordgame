@@ -143,8 +143,8 @@ a.button {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 30em;
-    height: 30em;
-    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.24);
+    height: 20em;
+    box-shadow: 0 0 2rem 0 rgba(193, 19, 19, 0.24);
     border-radius: 16px;
     position: absolute;
     z-index: 1;
