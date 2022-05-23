@@ -97,6 +97,9 @@
             // and default/override low DPI mode on mobile browsers.
             config.devicePixelRatio = 10;
             unityShowBanner('This application are not supported on mobile devices.');
+            progressBarEmpty.style.display = "none";
+            loadingBar.style.display = "block";
+
         } else {
             canvas.style.width = "0px";
             canvas.style.height = "0px";
