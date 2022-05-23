@@ -95,6 +95,8 @@
 
         canvas.style.width = "0px";
         canvas.style.height = "0px";
+        fullscreenButton.style.display = "none";
+
 
         if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
             // container.className = "unity-mobile";
@@ -114,6 +116,7 @@
                 createUnityInstance(canvas, config, (progress) => {
                     progressBarFull.style.width = 100 * progress + "%";
                 }).then((unityInstance) => {
+                    fullscreenButton.style.display = "block";
                     progressBarEmpty.style.display = "none";
                     fullscreenButton.onclick = () => {
                         unityInstance.SetFullscreen(1);
