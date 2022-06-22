@@ -5,4 +5,4 @@ The game was written using the unity game engine. The drawing of the cursor and 
 
 [Play Game](https://meteahmetyakar.github.io/wordgame/).
 
-<img src="https://github.com/meteahmetyakar/WordGame/blob/main/gameGif.gif" width="480" height="270" />
+<img src="https://github.com/meteahmetyakar/WordGame/blob/main/images/gameGif.gif" width="480" height="270" />
