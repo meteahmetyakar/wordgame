@@ -42,7 +42,7 @@ public class HighscoreTable : MonoBehaviour
                 highscores = JsonUtility.FromJson<Highscores>(jsonString);
             }*/
 
-            for (int i = 0; i < highscores.highscoreEntryList.Count; i++)       //Bubble Sort
+            for (int i = 0; i < highscores.highscoreEntryList.Count; i++)       //sorting
             {
                 for (int j = i + 1; j < highscores.highscoreEntryList.Count; j++)
                 {
@@ -104,10 +104,10 @@ public class HighscoreTable : MonoBehaviour
         string jsonString = PlayerPrefs.GetString("highscoreTable");            // We pull our Nick and score list from memory.
         Highscores highscores = JsonUtility.FromJson<Highscores>(jsonString);   // We create a Highscores object from the json representation.
 
-        if (highscores == null) //Eğer nesne null ise
+        if (highscores == null) //if list is null
         {
           
-            highscores = new Highscores()   //Liste oluşturuyoruz.
+            highscores = new Highscores()   //we create list
             {
                 highscoreEntryList = new List<HighscoreEntry>()
             };
